@@ -98,20 +98,32 @@ int main()
         4    5 6    7
     */
 
-//    cout<<"PreOrder:"<<endl;
-//    preorder(root);
-//    cout<<endl<<"InOrder:"<<endl;
-//    inorder(root);
-//    cout<<endl<<"PostOrder:"<<endl;
-//    postorder(root);
+   cout<<"PreOrder:"<<endl;
+   preorder(root);
+   cout<<endl<<"InOrder:"<<endl;
+   inorder(root);
+   cout<<endl<<"PostOrder:"<<endl;
+   postorder(root);
+   cout<<endl;
 
    // Building the Tree using preorder and inorder:
+
+   cout<<endl<<"Creating a new tree..."<<endl;
 
    int preorders[] = {1, 2, 4, 3, 5};
    int inorders[] = {4, 2, 1, 5, 3};
 
+   /*
+            1
+          /  \
+         2    3
+        /    /
+       4    5
+   */
+
    node *newroot = buildTree(preorders, inorders, 0, 4);
 
+   cout<<"Tree created successfully"<<endl<<"The inorder of the Tree is:"<<endl;
    inorder(newroot);
     return 0;
 }
